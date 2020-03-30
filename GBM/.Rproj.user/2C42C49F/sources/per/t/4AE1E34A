@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1560787929096.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3853939473",
+    "id" : "4AE1E34A",
+    "lastKnownWriteTime" : 1563826717,
+    "last_content_update" : 1563826717499,
+    "path" : "C:/R/Project/Model/GBM/sampling.R",
+    "project_path" : "sampling.R",
+    "properties" : {
+        "cursorPosition" : "54,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 18,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

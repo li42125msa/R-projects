@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554744002455.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "BBDA583B",
+    "lastKnownWriteTime" : 7308604914264011873,
+    "last_content_update" : 1554744002455,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "7117DC23",
+        "caption" : "BostonHousing",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=BostonHousing&cache_key=7117DC23",
+        "displayedObservations" : 506,
+        "environment" : "",
+        "object" : "BostonHousing",
+        "preview" : 0,
+        "totalObservations" : 506,
+        "variables" : 14
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

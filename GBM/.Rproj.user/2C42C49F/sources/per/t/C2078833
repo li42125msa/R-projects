@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1555610721937.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2270177324",
+    "id" : "C2078833",
+    "lastKnownWriteTime" : 1561135691,
+    "last_content_update" : 1561135691905,
+    "path" : "C:/R/Project/Model/GBM/Intro Notes.R",
+    "project_path" : "Intro Notes.R",
+    "properties" : {
+        "cursorPosition" : "8,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

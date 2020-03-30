@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1560266174650.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3291131229",
+    "id" : "CD1A221F",
+    "lastKnownWriteTime" : 1560358821,
+    "last_content_update" : 1560358821416,
+    "path" : "C:/R/Project/Model/GBM/modeling in tidyverse.R",
+    "project_path" : "modeling in tidyverse.R",
+    "properties" : {
+        "cursorPosition" : "13,15",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

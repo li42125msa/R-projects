@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554743908217.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "41625494",
+    "id" : "5441469",
+    "lastKnownWriteTime" : 1554744039,
+    "last_content_update" : 1554744039423,
+    "path" : "C:/R/Project/Model/Model/Missing data.R",
+    "project_path" : "Missing data.R",
+    "properties" : {
+        "cursorPosition" : "5,13",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559238500321.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3796526400",
+    "id" : "517A8793",
+    "lastKnownWriteTime" : 1563826717,
+    "last_content_update" : 1563826717446,
+    "path" : "C:/R/Project/Model/GBM/GLM.R",
+    "project_path" : "GLM.R",
+    "properties" : {
+        "cursorPosition" : "19,55",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

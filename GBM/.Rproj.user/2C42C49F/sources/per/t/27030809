@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1561575034085.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1762519492",
+    "id" : "27030809",
+    "lastKnownWriteTime" : 1561744712,
+    "last_content_update" : 1561744712875,
+    "path" : "C:/R/Project/Model/GBM/glmnet.R",
+    "project_path" : "glmnet.R",
+    "properties" : {
+        "cursorPosition" : "54,4",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1561640035877.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "425722844",
+    "id" : "78A12676",
+    "lastKnownWriteTime" : 1561744712,
+    "last_content_update" : 1561744712943,
+    "path" : "C:/R/Project/Model/GBM/missing imput.R",
+    "project_path" : "missing imput.R",
+    "properties" : {
+        "cursorPosition" : "70,25",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

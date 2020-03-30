@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1555443027382.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "657180230",
+    "id" : "CFDA45C5",
+    "lastKnownWriteTime" : 1564676465,
+    "last_content_update" : 1564676465070,
+    "path" : "C:/R/Project/Model/GBM/regression.R",
+    "project_path" : "regression.R",
+    "properties" : {
+        "cursorPosition" : "206,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

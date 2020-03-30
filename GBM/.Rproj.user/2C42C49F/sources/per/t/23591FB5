@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1555527519664.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3829593956",
+    "id" : "23591FB5",
+    "lastKnownWriteTime" : 1561126404,
+    "last_content_update" : 1561126404534,
+    "path" : "C:/R/Project/Model/GBM/Bagging.R",
+    "project_path" : "Bagging.R",
+    "properties" : {
+        "cursorPosition" : "58,66",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
