@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557063857469.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3927290971",
+    "id" : "BCCB8A58",
+    "lastKnownWriteTime" : 1563299162,
+    "last_content_update" : 1563299162622,
+    "path" : "C:/R/Project/GGplot/Histogram.R",
+    "project_path" : "Histogram.R",
+    "properties" : {
+        "cursorPosition" : "127,27",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

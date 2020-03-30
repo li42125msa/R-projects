@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556632746759.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3081167442",
+    "id" : "6DEE2BA0",
+    "lastKnownWriteTime" : 1559232958,
+    "last_content_update" : 1559232958527,
+    "path" : "C:/R/Project/GGplot/datacamp.R",
+    "project_path" : "datacamp.R",
+    "properties" : {
+        "cursorPosition" : "320,9",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

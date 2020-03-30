@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559059960327.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "9D73BC34",
+    "lastKnownWriteTime" : 1559077627,
+    "last_content_update" : 1559077627875,
+    "path" : "C:/R/Project/DPLYR/DPLYR/Intro.R",
+    "project_path" : "Intro.R",
+    "properties" : {
+        "cursorPosition" : "181,38",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

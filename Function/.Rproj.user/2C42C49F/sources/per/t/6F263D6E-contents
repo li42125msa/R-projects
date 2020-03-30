@@ -1,0 +1,95 @@
+library(purrr)
+# Load the purrr package
+library(purrr)
+
+# Use map_dbl() to find column means
+map_dbl(df, mean)
+
+# Use map_dbl() to column medians
+map_dbl(df, median)
+
+# Use map_dbl() to find column standard deviations
+map_dbl(df, sd)
+
+# Find the mean of each column
+map_dbl(planes, mean)
+
+# Find the mean of each column, excluding missing values
+map_dbl(planes, mean, na.rm = TRUE)
+
+# Find the 5th percentile of each column, excluding missing values
+map_dbl(planes, quantile, probs = c(0.05), na.rm = TRUE)
+
+# Find the columns that are numeric
+map_lgl(df3, is.numeric)
+
+# Find the type of each column
+map_chr(df3, typeof)
+
+# Find a summary of each column
+map(df3, summary)
+
+cyl<-split(mtcars, mtcars$cyl)
+cyl
+
+# Examine the structure of cyl
+str(cyl)
+
+# Extract the first element into four_cyls
+four_cyls <- cyl[[1]]
+
+# Fit a linear regression of mpg on wt using four_cyls
+lm(mpg ~ wt, data = four_cyls)
+
+
+# Rewrite to call an anonymous function
+map(cyl, function(df) lm(mpg ~ wt, data = df))
+
+map_dbl(cyl, function(df) mean(df$disp))
+
+map(cyl, ~ mean(.$disp))
+
+map(cyl, ~ lm(mpg ~ wt, data = .))
+
+list_of_results <- list(
+  list(a = 1, b = "A"), 
+  list(a = 2, b = "C"), 
+  list(a = 3, b = "D")
+)
+map(list_of_results, "a")
+
+# Save the result from the previous exercise to the variable models
+models=map(cyl, ~ lm(mpg ~ wt, data = .))
+models
+names(models)
+# Use map and coef to get the coefficients for each model: coefs
+coefs <- map(models, coef)
+coefs
+# Use string shortcut to extract the wt coefficient 
+map(coefs, "wt")
+
+coefs <- map(models, coef)
+
+# use map_dbl with the numeric shortcut to pull out the second element
+map_dbl(coefs, 2)
+
+nested_list <- list(
+   x1 = list(a = 1, b = 2),
+   x2 = list(a = 3, b = 4)
+)
+
+
+# Initialize some objects
+safe_readLines <- safely(readLines)
+html <- map(urls, safe_readLines)
+res <- transpose(html)[["result"]]
+errs <- transpose(html)[["error"]]
+res
+# Create a logical vector is_ok
+is_ok <- map_lgl(errs, is_null)
+
+# Extract the successful results
+res[is_ok]
+
+# Find the URLs that were unsuccessful
+urls[!is_ok]

@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559063940467.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F7172165",
+    "lastKnownWriteTime" : 1563310816,
+    "last_content_update" : 1563310816398,
+    "path" : "C:/R/Project/DPLYR/DPLYR/Intermediate R.R",
+    "project_path" : "Intermediate R.R",
+    "properties" : {
+        "cursorPosition" : "134,52",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

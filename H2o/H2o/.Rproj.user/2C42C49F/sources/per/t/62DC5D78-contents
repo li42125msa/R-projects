@@ -1,0 +1,225 @@
+library(h2o)
+h2o.init()
+# The following two commands remove any previously installed H2O packages for R.
+if ("package:h2o" %in% search()) { detach("package:h2o", unload=TRUE) }
+if ("h2o" %in% rownames(installed.packages())) { remove.packages("h2o") }
+
+# Next, we download packages that H2O depends on.
+pkgs <- c("RCurl","jsonlite")
+for (pkg in pkgs) {
+  if (! (pkg %in% rownames(installed.packages()))) { install.packages(pkg) }
+}
+
+# Now we download, install and initialize the H2O package for R.
+install.packages("h2o", type="source", repos="http://h2o-release.s3.amazonaws.com/h2o/rel-yau/3/R")
+
+# Finally, let's load H2O and start up an H2O cluster
+library(h2o)
+h2o.init(max_mem_size = '10g',nthreads =-1)
+h2o.clusterInfo()
+
+airlinesURL = "C:/R/h2o/allyears2k.csv"
+airlines.hex = h2o.importFile(path = airlinesURL,
+                              destination_frame = "airlines.hex")
+summary(airlines.hex)
+
+quantile(x = airlines.hex$ArrDelay, na.rm = TRUE)
+h2o.hist(airlines.hex$ArrDelay)
+
+#  high_na_columns = h2o.ignoreColumns(data = airlines.hex)
+# Find number of flights by airport
+originFlights = h2o.group_by(data = airlines.hex, by ="Origin", nrow("Origin"),gb.control=list(na.methods="rm"))
+
+originFlights.R = as.data.frame(originFlights)
+
+originFlights.R = as.data.frame(originFlights)
+
+# Find number of flights per month
+flightsByMonth = h2o.group_by(data = airlines.hex, by= "Month", nrow("Month"),gb.control=list(na.methods="rm"))
+
+
+flightsByMonth.R = as.data.frame(flightsByMonth)
+
+# Find months with the highest cancellation ratio
+which(colnames(airlines.hex)=="Cancelled")
+cancellationsByMonth = h2o.group_by(data = airlines.hex, by = "Month", sum("Cancelled"),gb.control=list(na.methods="rm"))
+
+cancellation_rate = cancellationsByMonth$sum_Cancelled/flightsByMonth$nrow
+rates_table = h2o.cbind(flightsByMonth$Month,
+                        cancellation_rate)
+rates_table.R = as.data.frame(rates_table)
+
+airlines.split = h2o.splitFrame(data = airlines.hex,ratios = 0.85)
+
+airlines.train = airlines.split[[1]]
+airlines.test = airlines.split[[2]]
+
+h2o.table(airlines.train$Cancelled)
+h2o.table(airlines.test$Cancelled)
+
+Y = "IsDepDelayed"
+X = c("Origin", "Dest", "DayofMonth", "Year", "UniqueCarrier", "DayOfWeek", "Month", "DepTime", "ArrTime", "Distance")
+# Define the data for the model and display the
+airlines.glm <- h2o.glm(training_frame=airlines.train, x=X, y=Y, family = "binomial", alpha = 0.5)
+
+# View model information: training statistics, performance, important variables
+summary(airlines.glm)
+
+# Predict using GLM model
+pred = h2o.predict(object = airlines.glm, newdata = airlines.test)
+
+# Look at summary of predictions: probability of TRUE class (p1)
+summary(pred)
+
+
+h2o.init()
+seeds_train_data_hf <- as.h2o(seeds_train_data)
+
+y <- "seed_type"
+x <- setdiff(colnames(seeds_train_data_hf), y)
+
+seeds_train_data_hf[, y] <- as.factor(seeds_train_data_hf[, y])
+
+sframe <- h2o.splitFrame(seeds_train_data_hf,ratios=.7, seed = 42)
+train <- sframe[[1]]
+valid <- sframe[[2]]
+
+
+# sframe <- h2o.splitFrame(data = seeds_data_hf,
+#                          ratios = c(0.7, 0.15),
+#                          seed = 42)
+# train <- sframe[[1]]
+# valid <- sframe[[2]]
+# test <- sframe[[3]]
+# Train random forest model
+rf_model <- h2o.randomForest(x = x,
+                             y = y,
+                             training_frame = train,
+                             validation_frame = valid)
+
+
+perf <- h2o.performance(gbm_model, test)
+h2o.confusionMatrix(perf)
+
+
+h2o.predict(gbm_model, test)
+
+
+
+gbm_params <- list(ntrees = c(100, 150, 200),
+                   max_depth = c(3, 5, 7),
+                   learn_rate = c(0.001, 0.01, 0.1))
+
+gbm_grid <- h2o.grid("gbm"
+                     ,
+                     grid_id = "gbm_grid"
+                     ,
+                     x = x,
+                     y = y,
+                     training_frame = train,
+                     validation_frame = valid,
+                     seed = 42,
+                     hyper_params = gbm_params)
+
+gbm_gridperf <- h2o.getGrid(grid_id = "gbm_grid"
+                            ,
+                            sort_by = "accuracy"
+                            ,
+                            decreasing = TRUE)
+best_gbm <- h2o.getModel(gbm_gridperf@model_ids[[1]])
+
+print(best_gbm@model[["model_summary"]])
+h2o.performance(best_gbm, test)
+
+
+############################Random Search
+gbm_params <- list(ntrees = c(100, 150, 200),
+                   max_depth = c(3, 5, 7),
+                   learn_rate = c(0.001, 0.01, 0.1))
+search_criteria <- list(strategy = "RandomDiscrete"
+                        ,
+                        max_runtime_secs = 60,
+                        seed = 42)
+gbm_grid <- h2o.grid("gbm"
+                     ,
+                     grid_id = "gbm_grid"
+                     ,
+                     x = x,
+                     y = y,
+                     training_frame = train,
+                     validation_frame = valid,
+                     seed = 42,
+                     hyper_params = gbm_params,
+                     search_criteria = search_criteria)
+
+
+
+search_criteria <- list(strategy = "RandomDiscrete"
+                        ,
+                        stopping_metric = "mean_per_class_error"
+                        ,
+                        stopping_tolerance = 0.0001,
+                        stopping_rounds = 6)
+gbm_grid <- h2o.grid("gbm"
+                     ,
+                     x = x,
+                     y = y,
+                     training_frame = train,
+                     validation_frame = valid,
+                     seed = 42,
+                     hyper_params = gbm_params,
+                     search_criteria = search_criteria)
+
+dl_params <- list(rate = c(0.001, 0.005, 0.01))
+
+dl_params <- list(hidden = list(c(50, 50), c(100, 100)),
+                  epochs = c(5, 10, 15),
+                  rate = c(0.001, 0.005, 0.01))
+
+# Define search criteria
+search_criteria <- list(strategy = "RandomDiscrete",
+                        max_runtime_secs = 10, # this is way too short & only used to keep runtime short!
+                        seed = 42)
+
+# Train with random search
+dl_grid <- h2o.grid("deeplearning",
+                    grid_id = "dl_grid",
+                    x = x,
+                    y = y,
+                    training_frame = train,
+                    validation_frame = valid,
+                    seed = 42,
+                    hyper_params = dl_params,
+                    search_criteria = search_criteria)
+
+
+# Define early stopping
+stopping_params <- list(strategy = "RandomDiscrete",
+                        stopping_metric = "misclassification",
+                        
+                        
+                        seed = 42)
+
+# Run automatic machine learning
+automl_model <- h2o.automl(x = x,
+                           y = y,
+                           training_frame = train,
+                           max_runtime_secs = 10,
+                           seed = 42)
+
+automl_model <- h2o.automl(x = x,
+                           y = y,
+                           training_frame = seeds_data_hf,
+                           nfolds = 3,
+                           max_runtime_secs = 60,
+                           sort_metric = "mean_per_class_error",
+                           seed = 42)
+
+# Extract the leaderboard
+lb <- automl_model@leaderboard
+head(lb)
+model_ids <- as.data.frame(lb)$model_id
+
+aml_leader <- automl_model@leader#best model
+
+?h2o.automl

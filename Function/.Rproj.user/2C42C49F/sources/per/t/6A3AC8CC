@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557337554381.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3360231844",
+    "id" : "6A3AC8CC",
+    "lastKnownWriteTime" : 1557350226,
+    "last_content_update" : 1557350226979,
+    "path" : "C:/R/Project/Function/Function4.R",
+    "project_path" : "Function4.R",
+    "properties" : {
+        "cursorPosition" : "16,0",
+        "scrollLine" : "3",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

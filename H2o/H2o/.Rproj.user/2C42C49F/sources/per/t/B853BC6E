@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1567778823332.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2602123347",
+    "id" : "B853BC6E",
+    "lastKnownWriteTime" : 1567778847,
+    "last_content_update" : 1567778847668,
+    "path" : "C:/R/Project/H2o/H2o/random forest.R",
+    "project_path" : "random forest.R",
+    "properties" : {
+        "cursorPosition" : "51,45",
+        "scrollLine" : "32",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

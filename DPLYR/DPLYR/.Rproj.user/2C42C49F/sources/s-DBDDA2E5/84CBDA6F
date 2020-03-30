@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559835223788.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "84CBDA6F",
+    "lastKnownWriteTime" : 1562866594,
+    "last_content_update" : 1562866594615,
+    "path" : "C:/R/Project/DPLYR/DPLYR/listendata.R",
+    "project_path" : "listendata.R",
+    "properties" : {
+        "cursorPosition" : "285,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

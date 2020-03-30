@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564676749348.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2EFEFDBF",
+    "lastKnownWriteTime" : 1564684077,
+    "last_content_update" : 1564684077961,
+    "path" : "C:/R/Project/DPLYR/DPLYR/missing data.R",
+    "project_path" : "missing data.R",
+    "properties" : {
+        "cursorPosition" : "137,46",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

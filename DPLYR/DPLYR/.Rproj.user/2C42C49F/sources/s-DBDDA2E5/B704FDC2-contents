@@ -1,0 +1,40 @@
+x <- 1:10
+y <- x^3+x^2+x-19
+lo <- loess(y~x)
+plot(x,y)
+lines(predict(lo), col='red', lwd=2)
+
+a=c(0.564056982,
+             0.615450967,
+             0.867621256,
+             0.925149438,
+             0.920443187,
+             1,
+             1.005213543,
+             1.132242297,
+             1.14088012,
+             1.160905147,
+             1.150503877,
+             1.173276192,
+             1.240730104,
+             1.268455476,
+             1.354591591,
+             1.531273895,
+             1.563927053,
+             1.053586439)
+
+y=length(a)
+
+y
+a
+b=seq(1:length(a));b
+
+plot(b,a)
+lines(predict(loess(a~b)), col='red', lwd=10)
+
+ggplot2::qplot(b,a, geom='smooth', span =0.5)
+
+library(ggplot2)
+smoothingSpline = smooth.spline(b, a, spar=0.35)
+
+lines(smoothingSpline)

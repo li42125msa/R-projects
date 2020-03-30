@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562866268831.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "2AB6FF8B",
+    "lastKnownWriteTime" : 1563472222,
+    "last_content_update" : 1563472222175,
+    "path" : "C:/R/Project/DPLYR/DPLYR/categorical data in tidyverse.R",
+    "project_path" : "categorical data in tidyverse.R",
+    "properties" : {
+        "cursorPosition" : "323,35",
+        "scrollLine" : "305",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

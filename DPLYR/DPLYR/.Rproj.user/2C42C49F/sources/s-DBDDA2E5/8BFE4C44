@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564678379702.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "8BFE4C44",
+    "lastKnownWriteTime" : 7308604914264011873,
+    "last_content_update" : 1564678379702,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E53469C3",
+        "caption" : "bakeoff",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=bakeoff&cache_key=E53469C3",
+        "displayedObservations" : "549",
+        "environment" : "",
+        "object" : "bakeoff",
+        "preview" : "0",
+        "totalObservations" : "549",
+        "variables" : "10"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

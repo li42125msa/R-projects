@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1554239585566.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B4A5628D",
+    "lastKnownWriteTime" : 1554383616,
+    "last_content_update" : 1554383616668,
+    "path" : "C:/R/Project/DPLYR/DPLYR/DPLYR.R",
+    "project_path" : "DPLYR.R",
+    "properties" : {
+        "cursorPosition" : "52,53",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

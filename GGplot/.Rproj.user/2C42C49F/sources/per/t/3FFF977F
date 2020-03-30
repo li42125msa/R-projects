@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1557064043738.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2786243175",
+    "id" : "3FFF977F",
+    "lastKnownWriteTime" : 1563299162,
+    "last_content_update" : 1563299162685,
+    "path" : "C:/R/Project/GGplot/bar.R",
+    "project_path" : "bar.R",
+    "properties" : {
+        "cursorPosition" : "104,22",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

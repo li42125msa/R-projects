@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1562614806167.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A1E14296",
+    "lastKnownWriteTime" : 1562793163,
+    "last_content_update" : 1562793163510,
+    "path" : "C:/R/Project/DPLYR/DPLYR/datatable.R",
+    "project_path" : "datatable.R",
+    "properties" : {
+        "cursorPosition" : "9,13",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

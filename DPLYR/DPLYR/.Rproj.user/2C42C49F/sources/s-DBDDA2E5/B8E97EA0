@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1559141514839.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "B8E97EA0",
+    "lastKnownWriteTime" : 1564675535,
+    "last_content_update" : 1564675535136,
+    "path" : "C:/R/Project/DPLYR/DPLYR/Tidyverse.R",
+    "project_path" : "Tidyverse.R",
+    "properties" : {
+        "cursorPosition" : "95,22",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

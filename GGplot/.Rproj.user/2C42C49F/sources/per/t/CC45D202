@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1556898025225.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1559588178",
+    "id" : "CC45D202",
+    "lastKnownWriteTime" : 1557065585,
+    "last_content_update" : 1557065585136,
+    "path" : "C:/R/Project/GGplot/2.R",
+    "project_path" : "2.R",
+    "properties" : {
+        "cursorPosition" : "252,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

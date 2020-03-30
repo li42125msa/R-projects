@@ -1,0 +1,78 @@
+library(h2o)
+h2o.init()
+
+df <- h2o.importFile("C:/Model/V2/AMFAM/SAS data/AMFAM_PD.csv")
+df[, c("sepal_len", "sepal_wid", "petal_len", "petal_wid")]
+
+h2o.str(df)
+h2o.dim(df)
+h2o.names(df)
+h2o.colnames(df)
+df$y=df$PD_UltInccLoss /df$EXP 
+
+sframe <- h2o.splitFrame(data = df,
+                                                 ratios = 0.7,
+                                                 seed = 42)
+                         train <- sframe[[1]]
+                         test<- sframe[[2]]
+
+df[,"Pol_CovPkg"]=h2o.asfactor(df[,"Pol_CovPkg"])
+
+df[,"CP3"]=h2o.asfactor(df[,"CP3"])
+
+df[,"PolVFree"]=h2o.asfactor(df[,"PolVFree"])
+
+df[,"Age"]=h2o.asfactor(df[,"Age"])
+
+df[,"Gender_Grp"]=h2o.asfactor(df[,"Gender_Grp"])
+df[,"Marital_Grp"]=h2o.asfactor(df[,"Marital_Grp"])
+
+df[,"symbol_pd"]=h2o.asfactor(df[,"symbol_pd"])
+h2o.str(df)
+
+rf_model <- h2o.randomForest(x = c("Pol_CovPkg",
+                                   "CP3",
+                                   "PolVFree",
+                                   "Age",
+                                   "Gender_Grp",
+                                   "Marital_Grp",
+                                   "AgeLic_G","DrTrain_G",
+                                   "GST_G",
+                                   "NumDri_G",
+                                   "NumVeh_G",
+                                   "PolLap_G",
+                                   "Tenure_G",
+                                   "PBI_G",
+                                   "LimitPD_G",
+                                   "VMinor36",
+                                   "VMajor36",
+                                   "VAFOT36",
+                                   "NumVeh_NumDr",
+                                   "FirstSevProb_G",
+                                   "FirstBdTile_G",
+                                   "FirstSevAcc_G",
+                                   "FirstOthSevProb_G",
+                                   "FirstNonSevAcc_G",
+                                   "FirstDmg_G",
+                                    "FirstPotDmg_G",
+                                    "FirstRtl_G",
+                                    "LastOwnLen_G" ,
+
+                                   "LastNonZOd_G",
+                                   "Avg_Rec_MAM_G",
+                                   "PayInFull",
+                                   "Lease_Ind",
+                                   "Tier",
+                                   "ModelYear",
+                                   "symbol_pd")              
+                                             
+                                   
+                               
+                               
+                               ,
+                             y = "y"        ,
+                             training_frame = train,
+                          
+                             )
+
+a<-as.data.frame(h2o.varimp(rf_model))
